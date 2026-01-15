@@ -4,30 +4,31 @@ public class Demo {
 
 	public static void main(String[] args) {
 		
-	//Jagged array where each array with different sizes
-		int nums [][] = new int [3][];
-		nums[0] = new int[2];
-		nums[1] = new int[4];
-		nums[2] = new int[3];
+	//3 Dimentional Arrays
+		int nums [][][] = new int [3][3][4];
 		
 		
-	//to generate a random number for an array of MultiDimensional array
-		for(int i=0;i<nums.length;i++){
-			for(int j=0;j<nums[i].length;j++) {
-				nums[i][j] = (int)(Math.random() * 10);
+	//to generate a random number for an array of 3D array
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				for(int k=0;k<4;k++) {
+					nums[i][j][k]=(int)(Math.random() * 10);
+				}
 			}
 		}
 		
-	//enhanced for loop to print MultiDimentional array
-		
-		for(int n[]: nums) {
-			for(int m: n) 
-			{
-				System.out.print(m + " ");
+	//for loop to print 3D arrays
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				for(int k=0;k<4;k++) {
+					System.out.print(nums[i][j][k] + " ");
+				}
+				System.out.println();
 			}
 			System.out.println();
 		}
-	}
 		
+	}
+	
 }
 
