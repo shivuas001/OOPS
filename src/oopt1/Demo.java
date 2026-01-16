@@ -1,32 +1,41 @@
 package oopt1;
+class Students
+{
+	int rollno;
+	String name;
+	int marks;
+}
 
 public class Demo {
 
 	public static void main(String[] args) {
 		
-	//3 Dimentional Arrays
-		int nums [][][] = new int [3][3][4];
+		Students s1 = new Students();
+		s1.rollno = 23;
+		s1.name = "shivu";
+		s1.marks = 100;
 		
+		Students s2 = new Students();
+		s2.rollno = 25;
+		s2.name = "rakesh";
+		s2.marks = 140;
 		
-	//to generate a random number for an array of 3D array
-		for(int i=0;i<3;i++) {
-			for(int j=0;j<3;j++) {
-				for(int k=0;k<4;k++) {
-					nums[i][j][k]=(int)(Math.random() * 10);
-				}
-			}
+		Students s3 = new Students();
+		s3.rollno = 26;
+		s3.name = "santosh";
+		s3.marks = 57;
+		
+		Students Students[] = new Students[3];
+		Students[0] = s1;
+		Students[1] = s2;
+		Students[2] = s3;
+		
+		for(int i=0;i<Students.length;i++)
+		{
+			System.out.println(Students[i].name + " : " + Students[i].rollno + " : " + Students[i].marks);
 		}
 		
-	//for loop to print 3D arrays
-		for(int i=0;i<3;i++) {
-			for(int j=0;j<3;j++) {
-				for(int k=0;k<4;k++) {
-					System.out.print(nums[i][j][k] + " ");
-				}
-				System.out.println();
-			}
-			System.out.println();
-		}
+		
 		
 	}
 	
