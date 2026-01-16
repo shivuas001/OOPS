@@ -10,7 +10,7 @@ public class Demo {
 
 	public static void main(String[] args) {
 		
-	/*	Students s1 = new Students();
+		Students s1 = new Students();
 		s1.name = "shivu";
 		s1.rollno = 24;
 		s1.marks = 44;
@@ -34,16 +34,6 @@ public class Demo {
 		for(Students S : Students)
 		{
 			System.out.println(S.name + " : " + S.rollno);
-		} */
-		
-		int nums[] = new int[3];
-		nums[0] = 2;
-		nums[1] = 4;
-		nums[2] = 7;
-		
-		for(int n : nums)
-		{
-			System.out.println(n);
 		}
 	}
 	
