@@ -1,40 +1,22 @@
 package oopt1;
-class Students
-{
-	int rollno;
-	String name;
-	int marks;
-}
 
 public class Demo {
 
 	public static void main(String[] args) {
 		
-		Students s1 = new Students();
-		s1.name = "shivu";
-		s1.rollno = 24;
-		s1.marks = 44;
+		//string is an object this how it works 
+		String name = new String("A SHIVA KUMAR");
+		System.out.println(name + " from HALEHALLI");
 		
-		Students s2 = new Students();
-		s2.name = "shivu";
-		s2.rollno = 24;
-		s2.marks = 44;
 		
-		Students s3 = new Students();
-		s3.name = "shivu";
-		s3.rollno = 24;
-		s3.marks = 44;
+		// these are some methods since it is class. to check char at index 3 and concat two strings
+		System.out.println(name.charAt(3));
+		System.out.println(name.concat(" YADAV"));
 		
-		Students Students[] = new Students[3];
-		Students[0] = s1;
-		Students[1] = s2;
-		Students[2] = s3;
 		
-	//using Enhanced for loop	
-		for(Students S : Students)
-		{
-			System.out.println(S.name + " : " + S.rollno);
-		}
+		//But this is the synatx for string as jvm automatically creates the object 
+		String Name = "RAKESH";
+		System.out.println(Name);
 	}
 	
 }
