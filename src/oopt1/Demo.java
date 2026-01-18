@@ -3,21 +3,20 @@ package oopt1;
 public class Demo {
 
 	public static void main(String[] args) {
+		StringBuffer sb = new StringBuffer("SHIVA");
+		System.out.println(sb.capacity());
 		
-		String name = "shivu";
-		name = name + "kumar";
+		System.out.println(sb.length());
 		
-	//here string does not changed from shivu to shivu kumar.
-	//heap as allocated different memory to name with of previous one.
-	//hence Strings are default immutable that is cant be changed.
-		System.out.println(name);
+		sb.append(" KUMAR");
+		System.out.println(sb);
 		
-		String s1 = "Shivu";
-		String s2 = "Shivu";
+		String str = sb.toString();
 		
-	//it returns true bcoz s1 and s1 have same string name,
-	//so memory allocation in heap for both variable are same address.
-		System.out.println(s1 == s2);
+		System.out.println(sb.charAt(3));
+		System.out.println(sb.isEmpty());
+		System.out.println(sb.deleteCharAt(4));
+		System.out.println(sb.getClass());
 	}
 	
 }
