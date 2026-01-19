@@ -1,27 +1,37 @@
 package oopt1;
 
+class Mobile{
+	String brand;
+	int price;
+//its is static variable which shared by all objects as name in both objects are same 
+	static String name;
+	
+	public void display() {
+		System.out.println(brand + " : " + price + " : " + name);
+	}
+}
+
 public class Demo {
 
 	public static void main(String[] args) {
 		
-	//basically capacity is 16 but if string size 5 then extra 5 spaces
-	//will be added in heap memory to relocate memory while data is changed
-		StringBuffer sb = new StringBuffer("SHIVA");
+		Mobile obj1 = new Mobile();
+		obj1.brand = "redmi";
+		obj1.price = 12000;
+	//correct type to call static variable is by its class name not by its objects name bcoz they share same name
+		Mobile.name = "smartphone";
 		
-	//these different times of methods we can perform in string buffer
-		System.out.println(sb.capacity());
+		Mobile obj2 = new Mobile();
+		obj2.brand = "vivo t3";
+		obj2.price = 22000;
+		Mobile.name = "smartphone";
 		
-		System.out.println(sb.length());
+		Mobile.name = "phone";
 		
-		sb.append(" KUMAR");
-		System.out.println(sb);
+		obj1.display();
+		obj2.display();
 		
-		String str = sb.toString();
-		
-		System.out.println(sb.charAt(3));
-		System.out.println(sb.isEmpty());
-		System.out.println(sb.deleteCharAt(4));
-		System.out.println(sb.getClass());
+	
 	}
 	
 }
