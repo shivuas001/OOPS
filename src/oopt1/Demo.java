@@ -23,12 +23,16 @@ class Mobile{
 
 public class Demo {
 
-	public static void main(String[] args) {
-	//we have two objects so two times the constructor will call
-	//but has name var is static we want call it once so static block is used
-		Mobile obj1 = new Mobile();
-		Mobile obj2 = new Mobile();
+	public static void main(String[] args) throws ClassNotFoundException {
+	
+		//when we want to create object, class is loaded from library and object is created.
+		//when class loads, first static block is called. then object is created and constructor is called
 		
+		//when u want to load class but u dont have object.....
+		
+		//here it loads class to call static block.its an method to load class.
+		Class.forName("oopt1.Mobile");
+		 
 	
 	}
 	
