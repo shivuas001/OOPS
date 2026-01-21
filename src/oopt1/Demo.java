@@ -3,8 +3,8 @@ package oopt1;
 class Human{
 // when we make variables private it can be used only with the class not in other class
 //but we can access the data using methods ,this is encapsulation.
-	private int age = 11;
-	private String name = "shivu";
+	private int age;
+	private String name ;
 	
 	public int getAge() {
 		return age;
@@ -18,6 +18,7 @@ class Human{
 	public void setName(String n) {
 		name = n;
 	}
+	
 }
 
 
