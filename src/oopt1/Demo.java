@@ -1,43 +1,35 @@
 package oopt1;
 
-class Mobile{
-	String brand;
-	int price;
-	static String name;
-
-	public void display()
-	{
-		System.out.println(brand + " : " + price + " : " + name);
-	}
+class Human{
+// when we make variables private it can be used only with the class not in other class
+//but we can access the data using methods ,this is encapsulation.
+	private int age = 11;
+	private String name = "shivu";
 	
-//non static variables cannot be called in static method so we need to the which obj to be called	
-	public static void display1(Mobile obj1)
-	{
-		System.out.println(obj1.brand + " : " + obj1.price + " : " + name);
+	public int getAge() {
+		return age;
 	}
-	
+	public String getName() {
+		return name;
+	}
+	public void setAge(int a) {
+		age = a;
+	}
+	public void setName(String n) {
+		name = n;
+	}
 }
+
 
 public class Demo {
 
 	public static void main(String[] args) {
-	     Mobile obj1 = new Mobile();
-	     obj1.brand = "redmi";
-	     obj1.price = 34033;
-	     Mobile.name = "phone";
-	     
-	     Mobile obj2 = new Mobile();
-	     obj2.brand = "redmi 4a";
-	     obj2.price = 545422;
-	     Mobile.name = "phone";
-	     
-	     obj1.display();
-	     obj2.display();
-	     
-	   //we need to call this method using class bcoz it is static method 
-	     Mobile.display1(obj1);
-	     
-	
+	    Human obj = new Human();
+	    obj.setAge(11);
+	    obj.setName("Shivu");
+	    
+	    
+	    System.out.println(obj.getName() + " : " + obj.getAge());
 	}
 	
 }
