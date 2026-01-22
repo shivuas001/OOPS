@@ -1,10 +1,16 @@
 package oopt1;
 
 class Human{
-// when we make variables private it can be used only with the class not in other class
-//but we can access the data using methods ,this is encapsulation.
 	private int age;
 	private String name ;
+
+	//here constructor is special type of method which has name of class
+	//constructor is called when obj is created every time u create object constructor is called
+	
+	public Human(){
+	//in main class we have two object then two time constructor is called
+	   System.out.println("in constructor");
+	}
 	
 	public int getAge() {
 		return age;
@@ -12,10 +18,6 @@ class Human{
 	public String getName() {
 		return name;
 	}
-	
-//this is used to represent the current object why it used bcoz in previous we two different variables.
-//a variable has global and age variable as instance var instead we create same variable.
-//my mentioning this.age = age represent the current object obj with method setAge()
 	public void setAge(int age) {
 		this.age = age;
 	}
@@ -30,11 +32,11 @@ public class Demo {
 
 	public static void main(String[] args) {
 	    Human obj = new Human();
-	    obj.setAge(11);
-	    obj.setName("Shivu");
-	    
-	    
+	    Human obj2 = new Human();
 	    System.out.println(obj.getName() + " : " + obj.getAge());
+	    
+	    //obj.setAge(11);
+	    //obj.setName("Shivu");
 	}
 	
 }
