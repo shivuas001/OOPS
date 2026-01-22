@@ -4,12 +4,14 @@ class Human{
 	private int age;
 	private String name ;
 
-	//here constructor is special type of method which has name of class
-	//constructor is called when obj is created every time u create object constructor is called
+//when values are not assigned and we want print age and name
+//we get default values of it that is string as null and int as 0
+//as constructor is called when object is created we can assign the values in constructor as default 
+//now when constructor is called name and age values is assigned as u mentioned in it instead of default null and 0
 	
 	public Human(){
-	//in main class we have two object then two time constructor is called
-	   System.out.println("in constructor");
+	   name = "shivu";
+	   age = 12;
 	}
 	
 	public int getAge() {
