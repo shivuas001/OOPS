@@ -12,6 +12,10 @@ class Human{
 	public String getName() {
 		return name;
 	}
+	
+//this is used to represent the current object why it used bcoz in previous we two different variables.
+//a variable has global and age variable as instance var instead we create same variable.
+//my mentioning this.age = age represent the current object obj with method setAge()
 	public void setAge(int age) {
 		this.age = age;
 	}
