@@ -1,7 +1,5 @@
 package oopt1;
 
-//every class in java extends to Object class and object is type class.
-//here in this program class B extends A and A extends Object Class in default whether u mention are not.
 
 class A extends Object{
 
@@ -21,13 +19,15 @@ class A extends Object{
 class B extends A{
 	public B()
 	{ 
-		super(5);
+		super();
 		System.out.println("in B cons");
 	}
-	
+//we use this method bcoz as we pass parameters in object it calls super class constructor
+//and it intialize parametric Constructor and 
+//then by this method default constructor of class is also called
 	public B(int n)
 	{
-		super();
+		this();
 		System.out.println("in B int cons");
 	}
 }
@@ -35,9 +35,12 @@ class B extends A{
 public class Demo {
 
 	public static void main(String[] args) {
-	    B obj = new B();
+	    B obj = new B(5);
 	}
 	
 }
+
+//before when when used super method only parametric constructor and default constructor of super class is called
+// by usig this method both default and parametric constructor class B and default Constructor of Class A is called.
 
 
