@@ -15,19 +15,20 @@ class A{
 	}
 }
 
+
+//when u wont pass any parameters in in object it will intializes default constructor that is "in A cons"
+//but we want to intialize parametric constructor of super class A
 class B extends A{
 	public B()
-	{
-		super();
+	{ 
+	//so u need to pass an parameter in default constructor then a paremetric Constructor of super class will be called
+		super(5);
 		System.out.println("in B cons");
 	}
 	
-//here when u use parametric constructor when u extend A class an default constructor is called in super class
-//and we two constructor in super class that is A. 
-//when u pass an parameters in super method then the parametric constructor of A also will be called orelse an default will be called
 	public B(int n)
 	{
-		super(n);
+		super();
 		System.out.println("in B int cons");
 	}
 }
@@ -35,7 +36,7 @@ class B extends A{
 public class Demo {
 
 	public static void main(String[] args) {
-	    B obj = new B(5);
+	    B obj = new B();
 	}
 	
 }
