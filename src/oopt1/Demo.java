@@ -1,7 +1,10 @@
 package oopt1;
 
-class A{
-//by default super method will be in constructor to refer super class  
+//every class in java extends to Object class and object is type class.
+//here in this program class B extends A and A extends Object Class in default whether u mention are not.
+
+class A extends Object{
+
 	public A()
 	{
 		super();
@@ -15,13 +18,9 @@ class A{
 	}
 }
 
-
-//when u wont pass any parameters in in object it will intializes default constructor that is "in A cons"
-//but we want to intialize parametric constructor of super class A
 class B extends A{
 	public B()
 	{ 
-	//so u need to pass an parameter in default constructor then a paremetric Constructor of super class will be called
 		super(5);
 		System.out.println("in B cons");
 	}
