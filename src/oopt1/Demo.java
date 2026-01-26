@@ -17,9 +17,9 @@ class A{
 public class Demo {
 
 	public static void main(String[] args) {
-	//anonymous object  bcoz it do not have a name that is reference
-	//cons is we cant reuse this object again
-	    new A();  
+	// we call call the methoud using this anonymous object
+	//but cant reuse it with other methods
+	    new A().show();  
 	}
 	
 }
