@@ -1,46 +1,27 @@
 package oopt1;
 
-
-class A extends Object{
-
-	public A()
+class A{
+	
+	public void show()
 	{
-		super();
-		System.out.println("in  A constroctor");
+		System.out.println("in show method");
 	}
 	
-	public A(int n)
+	public A()
 	{
-		super();
-		System.out.println("in  A int constrctor");
+		System.out.println("in Constructor");
 	}
 }
 
-class B extends A{
-	public B()
-	{ 
-		super();
-		System.out.println("in B cons");
-	}
-//we use this method bcoz as we pass parameters in object it calls super class constructor
-//and it intialize parametric Constructor and 
-//then by this method default constructor of class is also called
-	public B(int n)
-	{
-		this();
-		System.out.println("in B int cons");
-	}
-}
 
 public class Demo {
 
 	public static void main(String[] args) {
-	    B obj = new B(5);
+	//anonymous object  bcoz it do not have a name that is reference
+	//cons is we cant reuse this object again
+	    new A();  
 	}
 	
 }
-
-//before when when used super method only parametric constructor and default constructor of super class is called
-// by usig this method both default and parametric constructor class B and default Constructor of Class A is called.
 
 
