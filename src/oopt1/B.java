@@ -1,6 +1,15 @@
 package oopt1;
 
+class Launch{
+	public void abc()
+	{
+		B obj = new B();
+	//we can use protected variables present in same package
+		System.out.println(obj.marks);
+	}
+}
+
 public class B {
-//if we use private we can use it only within the class.irrespective of same packages
-    private int marks = 4;
+
+    protected int marks = 4;
 }
