@@ -1,8 +1,8 @@
 package oopt1;
 
-//when we make class as final we can't inherit that class if we extends it it through an error
-final class  Calculator1{
-	public void show()
+class  Calculator1{
+//when we make method as final we can't override that method if we override it through an error
+	public final void show()
 	{
 		System.out.println("by Shivakumar");
 	}
