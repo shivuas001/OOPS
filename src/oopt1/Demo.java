@@ -1,41 +1,16 @@
 package oopt1;
 
-class Aa{
-	public void show()
-	{
-		System.out.println("in A show");
-	}
-}
-class Ba extends Aa{
-	public void show()
-	{
-		System.out.println("in B show");
-	}
-}
-
-class Ca extends Ba{
-	public void show()
-	{
-		System.out.println("in C show");
-	}
-}
-
+//final keyword can be used with variable, method and class
 
 public class Demo {
 
 	public static void main(String[] args) {
-		
-	//here same method is behaving differently according to the object we refer	
-         Aa obj = new Aa();
-         obj.show();
-     //here obj is changed from Aa to Ba 
-         obj = new Ba();
-         obj.show();
-     //here obj is changed from Ba to Ca
-         obj = new Ca();
-         obj.show();
-         
-        //this is decided in runtime where same method behave different according to object
+	//when we make variable final we cant change it that becomes constant
+	//it gives an error if we try to change it
+		final int marks = 10;
+		marks = 9;
+		System.out.println(marks);
+	
 	}
 }
 
