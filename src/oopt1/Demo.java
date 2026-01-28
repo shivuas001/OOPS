@@ -1,15 +1,30 @@
 package oopt1;
 
-//final keyword can be used with variable, method and class
+//when we make class as final we can't inherit that class if we extends it it through an error
+final class  Calculator1{
+	public void show()
+	{
+		System.out.println("by Shivakumar");
+	}
+	public void add(int a, int b)
+	{
+		System.out.println(a+b);
+	}
+}
+
+class AdvCalc1 extends Calculator1
+{
+	public void show()
+	{
+		System.out.println("by chirag");
+	}
+	}
 
 public class Demo {
 
 	public static void main(String[] args) {
-	//when we make variable final we cant change it that becomes constant
-	//it gives an error if we try to change it
-		final int marks = 10;
-		marks = 9;
-		System.out.println(marks);
+		Calculator1 obj = new Calculator1();
+	   obj.show();
 	
 	}
 }
