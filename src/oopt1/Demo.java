@@ -1,11 +1,15 @@
 package oopt1;
-import oopt2.*;
 
-//we can access protected present in another package as subclass
-class C extends B {
-	public void abc()
+class Aa{
+	public void show()
 	{
-		System.out.println(marks);
+		System.out.println("in A show");
+	}
+}
+class Ba extends Aa{
+	public void show()
+	{
+		System.out.println("in B show");
 	}
 }
 
@@ -13,13 +17,10 @@ class C extends B {
 public class Demo {
 
 	public static void main(String[] args) {
-          A obj = new A();
-    //we cant use protected present in another package as non-subclass
-          System.out.println(obj.marks);
-      
-   
-          B obj1 = new B();
-          System.out.println(obj1.marks);
+		
+	//here we have different reference of Aa but object is Ba and this works
+         Aa obj = new Ba();
+         obj.show();
 	}
 }
 
