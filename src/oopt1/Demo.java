@@ -9,7 +9,7 @@ class Aa{
 		System.out.println("in A show");
 	}
 	
-	class Ba{
+	static class Ba{
 		public void config()
 		{
 			System.out.println("in Config");
@@ -18,13 +18,13 @@ class Aa{
 }
 
 public class Demo {
-
 	public static void main(String[] args) {
 			Aa obj = new Aa();
 			obj.show();
 			
-		//if we want call the method that present class inside class we need specify in which class this class present
-			Aa.Ba obj1 = obj.new Ba(); //as class Ba is non static we need object to refer it so we obj.new Ba();			
+		//when we have inner class static we do not need object reference as we done in previous
+		//if inner class is static we can directly call from class
+			Aa.Ba obj1 = new Aa.Ba(); 			
 			obj1.config();
 		
 		  
