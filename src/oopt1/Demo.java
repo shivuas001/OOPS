@@ -18,6 +18,7 @@ public class Demo {
 	public static void main(String[] args) {
 		
 	//this is upcasting as object is Bb it refers up that is parent class Aa
+	//we need not mention this upcast as it default and this happens in backend just for understanding
 	   Aa obj = (Aa) new Bb();
 	   obj.show1();
 	 
