@@ -1,32 +1,25 @@
 package oopt1;
 
-//we have inner class here class inside class
-class Aa{
-	int a;
-	
+class A{
 	public void show() 
 	{
 		System.out.println("in A show");
 	}
 	
-	static class Ba{
-		public void config()
-		{
-			System.out.println("in Config");
-		}
-	}
 }
 
 public class Demo {
 	public static void main(String[] args) {
-			Aa obj = new Aa();
-			obj.show();
-			
-		//when we have inner class static we do not need object reference as we done in previous
-		//if inner class is static we can directly call from class
-			Aa.Ba obj1 = new Aa.Ba(); 			
-			obj1.config();
-		
+	//this anonymous inner class where inner class is created inside demo class but it does not have an class name
+	//once we call the method it overides previous class and class anonymous class method
+		A obj = new A() 
+		{
+			public void show() 
+			{
+				System.out.println("in new show");
+			}
+		};
+		obj.show();
 		  
    }
 }
