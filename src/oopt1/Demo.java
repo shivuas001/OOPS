@@ -1,32 +1,38 @@
 package oopt1;
+//if we have abstract method we should compulsory make class abstract
+//but we can have non abstract methods in abstract class
 
-class Aa{
-	public void show1()
-	{
-		System.out.println("in A show");
+
+abstract class Car{
+//here i have declared method drive() but i dont know to define it so i used abstract for method
+	public abstract void drive();
+	
+	public void playMusic(){
+		{
+			System.out.println("playing Music");
+		}
 	}
 }
-class Bb extends Aa{
-	public void show2()
+
+class Wagnor extends Car{
+//here i have defined method drive() now we can create object Wagnor and  call this method
+	public void drive()
 	{
-		System.out.println("in B show");
+		System.out.println("i can drive");
 	}
 }
+
 
 public class Demo {
 
 	public static void main(String[] args) {
-	   Aa obj = (Aa) new Bb();
-	   obj.show1();
-	   
-	//Downcasting 
-	//there is problem that we created object of Bb but we unable to call show2() though it belongs to Bb class
-	//this is because object Bb have an reference of Aa in object and Aa class  doen't know Bb 
-	   
-	   Bb obj1 = (Bb) obj;
-	   obj1.show2();
-	 //now we can call show2() method because we downcasted Aa 
-	 //we created another reference Bb of variable obj1 and downcasted obj of refence Aa is from Bb
+	
+	//we cant create object of abstract class the class which defines abstract method that class object can be create
+		Car obj = new Wagnor();
+		obj.drive();
+		obj.playMusic();
+		
+		
    }
 }
 
