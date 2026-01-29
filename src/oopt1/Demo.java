@@ -1,45 +1,33 @@
 package oopt1;
 
-abstract class Car{
+//we have inner class here class inside class
+class Aa{
+	int a;
 	
-	public abstract void drive();
-	public abstract void fly();
+	public void show() 
+	{
+		System.out.println("in A show");
+	}
 	
-	public void playMusic(){
+	class Ba{
+		public void config()
 		{
-			System.out.println("playing Music");
+			System.out.println("in Config");
 		}
 	}
 }
 
-//since we defined only one method in this class and another abstract method is not resolved so we need make this class abstract
-//bcoz this is inherited of class Car
-abstract class  Wagnor extends Car{
-	public void drive()
-	{
-		System.out.println("i can drive");
-	}
-}
-
-//here we defined method fly and inherited Wagnor now this is multilevel inheritance and all methods are resolved
-//we can create this object and call all the methods
-class UpdatedWagnor extends Wagnor{
-	public void fly()
-	{
-		System.out.println("i can fly");
-	}
-}
-
-
 public class Demo {
 
 	public static void main(String[] args) {
-		Car obj = new UpdatedWagnor();
-		obj.drive();
-		obj.playMusic();
-		obj.fly();
+			Aa obj = new Aa();
+			obj.show();
+			
+		//if we want call the method that present class inside class we need specify in which class this class present
+			Aa.Ba obj1 = obj.new Ba(); //as class Ba is non static we need object to refer it so we obj.new Ba();			
+			obj1.config();
 		
-		
+		  
    }
 }
 
