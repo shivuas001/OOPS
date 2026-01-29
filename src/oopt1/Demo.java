@@ -1,8 +1,7 @@
 package oopt1;
 
 abstract class Car{
-//here we two abstract methods and one is resolved in class Wagnor.
-//if this is the case it gives an error becoz only when all abstract method are resolved that defined in another class it works
+	
 	public abstract void drive();
 	public abstract void fly();
 	
@@ -13,10 +12,21 @@ abstract class Car{
 	}
 }
 
-class Wagnor extends Car{
+//since we defined only one method in this class and another abstract method is not resolved so we need make this class abstract
+//bcoz this is inherited of class Car
+abstract class  Wagnor extends Car{
 	public void drive()
 	{
 		System.out.println("i can drive");
+	}
+}
+
+//here we defined method fly and inherited Wagnor now this is multilevel inheritance and all methods are resolved
+//we can create this object and call all the methods
+class UpdatedWagnor extends Wagnor{
+	public void fly()
+	{
+		System.out.println("i can fly");
 	}
 }
 
@@ -24,9 +34,10 @@ class Wagnor extends Car{
 public class Demo {
 
 	public static void main(String[] args) {
-		Car obj = new Wagnor();
+		Car obj = new UpdatedWagnor();
 		obj.drive();
 		obj.playMusic();
+		obj.fly();
 		
 		
    }
