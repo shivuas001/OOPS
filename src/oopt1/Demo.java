@@ -1,17 +1,12 @@
 package oopt1;
 
-class A{
-	public void show() 
-	{
-		System.out.println("in A show");
-	}
-	
+abstract class A{
+	public abstract void show();
 }
 
 public class Demo {
 	public static void main(String[] args) {
-	//this anonymous inner class where inner class is created inside demo class but it does not have an class name
-	//once we call the method it overides previous class and class anonymous class method
+	//when we have only one abstract method to define in other other class instead using anonymous inner class it works  
 		A obj = new A() 
 		{
 			public void show() 
