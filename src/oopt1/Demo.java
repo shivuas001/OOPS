@@ -6,7 +6,8 @@ abstract class A{
 
 public class Demo {
 	public static void main(String[] args) {
-	//when we have only one abstract method to define in other other class instead using anonymous inner class it works  
+	//when we have only one abstract method to define in other other class instead using anonymous inner class it works
+	// we can also use if we have multiple abstract method.
 		A obj = new A() 
 		{
 			public void show() 
