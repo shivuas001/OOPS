@@ -1,6 +1,7 @@
 package oopt1;
 
 enum Laptop{
+//all these are objects in enum
      Macbook(2000), Vivobook(1000), Hp(1500), Ideapad(1200);
 	
 	 private int price;
@@ -21,8 +22,11 @@ enum Laptop{
 public class Demo {
 	public static void main(String[] args) {
 	 
-		Laptop lap = Laptop.Macbook;
-		System.out.println(lap + " : " + lap.getPrice());
+	//to print all objects with prices Enhanced for loop used
+		for(Laptop lap : Laptop.values())
+		{
+			System.out.println(lap + " : " + lap.getPrice());
+		}
 		
    }
 }
