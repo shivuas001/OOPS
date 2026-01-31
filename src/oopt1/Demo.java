@@ -1,26 +1,52 @@
 package oopt1;
 
-//A is now an interface not an class. when we interface by default methods in interfaces are public and abstract
-//we can have variables in interface but by default they are final and static
+//class to class --> extends
+//interface to class --> implements
+//interface to interface --> extends
+
  interface A{
-	 
-	 int age = 21;
-	 String area = "Bengaluru";
-	 
 	 void show();
 	 void config();
 }
- //implemented that defined show() and config() method in B class 
+interface Bb{
+	void run();
+}
+
+//interface can inherit an another interfaces that it extends other interfaces
+interface C extends Bb{
+	void play();
+}
+
+//class can implement one or more interfaces
+class X implements A, C{
+	public void show()
+	{
+		System.out.println("in show method");
+	}
+	public void config()
+	{
+		System.out.println("in config method");
+	}
+	public void run()
+	{
+		System.out.println("running");
+	}
+	public void play()
+	{
+		System.out.println("playing");
+	}
+}
  
 public class Demo {
 	public static void main(String[] args) {
-	  A obj = new B();
+	  A obj = new X();
 	  obj.show();
 	  obj.config();
 	  
-// as variables in interfaces static we can directly call them with interface name
-//we cant change variables data as they final in default
-	  System.out.println(A.age + " : " + A.area);
+	//we need to create another object as reference C bcoz A interface does not know method run(); 
+	  C obj1 = new X();	 
+	  obj1.run();
+	  obj1.play();
 	  
    }
 }
