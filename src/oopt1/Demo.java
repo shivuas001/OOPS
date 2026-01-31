@@ -1,32 +1,31 @@
 package oopt1;
 
-enum Status{
-	Running, Failed, Pending, Success
+enum Laptop{
+     Macbook(2000), Vivobook(1000), Hp(1500), Ideapad(1200);
+	
+	 private int price;
+	 
+	 private Laptop(int price) {
+		 this.price = price;
+	 }
+	 
+	 public int getPrice()
+	 {
+		 return price;
+	 }
+	 public void setPrice(int price)
+	 {
+		 this.price = price;
+	 }
 }
 public class Demo {
 	public static void main(String[] args) {
-	
-	  Status s = Status.Success;
-	
-//here s refering already an Status so we need no mention status directly state the Constant and print
-	 switch (s) {
-	   case Running:
-		   System.out.println("All Good");
-		   break;
-		   
-	   case Failed:
-		   System.out.println("Try Again");
-		   break;
-		   
-	   case Pending:
-		   System.out.println("Please Wait");
-		   break; 
-		   
-	   default:
-		   System.out.println("Done");
-		   break; 
-	 }
+	 
+		Laptop lap = Laptop.Macbook;
+		System.out.println(lap + " : " + lap.getPrice());
+		
    }
 }
+
 
 
