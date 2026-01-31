@@ -7,9 +7,16 @@ enum Status{
 public class Demo {
 	public static void main(String[] args) {
 	
-	//by Status reference we can call constants
-	  Status s = Status.Failed;
-	  System.out.println(s);
+	//values is of type array so mentioning array in reference is must if not leads to error
+	   Status[] ss = Status.values();
+	   
+	//Enhanced for loop we used is to print all the status constants and
+	//ordinal() method to print a specific values of particular constant
+	   
+	  for(Status s: ss) {
+		  System.out.println(s + " : " + s.ordinal());
+	  }
+	  
    }
 }
 
