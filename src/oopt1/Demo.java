@@ -1,37 +1,27 @@
 package oopt1;
 
-interface Computer{
-	void code();
+//A is now an interface not an class. when we interface by default methods in interfaces are public and abstract
+//we can have variables in interface but by default they are final and static
+ interface A{
+	 
+	 int age = 21;
+	 String area = "Bengaluru";
+	 
+	 void show();
+	 void config();
 }
-
-class Laptop implements Computer{
-	public void code()
-	{
-		System.out.println("compile, run, debug");
-	}
-}
-class Desktop implements Computer{
-	public void code()
-	{
-		System.out.println("compile, run, debug : Faster");
-	}
-}
-
-
-class Developer{
-	public void devApp(Computer lap)
-	{
-		lap.code();
-	}
-}
-
+ //implemented that defined show() and config() method in B class 
+ 
 public class Demo {
 	public static void main(String[] args) {
-		Computer lap = new Laptop();
-		Computer des = new Desktop();
-		
-		Developer shivu = new Developer();
-		shivu.devApp(des);
+	  A obj = new B();
+	  obj.show();
+	  obj.config();
+	  
+// as variables in interfaces static we can directly call them with interface name
+//we cant change variables data as they final in default
+	  System.out.println(A.age + " : " + A.area);
+	  
    }
 }
 

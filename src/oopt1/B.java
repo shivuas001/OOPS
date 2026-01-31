@@ -1,15 +1,12 @@
 package oopt1;
 
-class Launch{
-	public void abc()
+class B implements A{
+	public void show()
 	{
-		B obj = new B();
-	//we can use protected variables present in same package
-		System.out.println(obj.marks);
+		System.out.println("in show method");
 	}
-}
-
-public class B {
-
-    protected int marks = 4;
+	public void config()
+	{
+		System.out.println("in config method");
+	}
 }
