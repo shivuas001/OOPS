@@ -9,14 +9,12 @@ interface A{
 
 public class Demo {
 	public static void main(String[] args) {
-	 //we used Anonymous inner class here
-		A obj = new A() {
-			public void show() {
-				System.out.println("in show() method");
-			}
-		};
+	//now will use lambda expressions to reduce Anonymous inner class code
+	//we need not mention object A, method just what to define is required. all these will look after by lambda expression ->
+	//this can be used only with @FuntionalInterface
+		
+		A obj = () ->  System.out.println("in show() method");
 		obj.show();
-	
    }
 }
 
