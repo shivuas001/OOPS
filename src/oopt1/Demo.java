@@ -3,18 +3,17 @@ package oopt1;
 //when FuntionalInterface annotation is used it gives error when more than methods are found in interface.
 @FunctionalInterface 
 interface A{
-	void show();
+	void show(int i);
 }
 
 
 public class Demo {
 	public static void main(String[] args) {
-	//now will use lambda expressions to reduce Anonymous inner class code
-	//we need not mention object A, method just what to define is required. all these will look after by lambda expression ->
-	//this can be used only with @FuntionalInterface
+		//this is updated lambda expression using FuntionalInterface Annotation by passing parameters
+		//here in bracket we need not mention type of variable lambda expression will look after it in JVM.
 		
-		A obj = () ->  System.out.println("in show() method");
-		obj.show();
+		A obj = (i) ->  System.out.println("in show() method" + " : " + i);
+		obj.show(5);
    }
 }
 
