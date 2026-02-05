@@ -1,16 +1,20 @@
-package oopt2;
+package geeksForGeeks;
+
 import java.util.ArrayList;
 
-public class Demo1 {
+public class Geeks {
 
 	public static void main(String[] args) {
-		 ArrayList<Integer> list = new ArrayList<Integer>();
+		
+		//creating arraylist and elements
+		ArrayList<Integer> list = new ArrayList<Integer>();
 		 
 		 list.add(20);
 		 list.add(40);
 		 list.add(22);
 		 
 		 System.out.println(list);
+
 	}
 
 }
